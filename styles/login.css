@@ -13,6 +13,33 @@
   display: block;
   margin-left: 20px;
 }
+.login-header__menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: 15px;
+}
+.login-header__menu .menu-item {
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: white;
+  margin-bottom: 10px;
+  transition: transform 1s, opacity 3s;
+}
+.login-header__menu .menu-item:last-child {
+  margin-bottom: 0;
+}
+.login-header__menu:hover .menu-item:nth-child(1) {
+  transform: translateY(calc( 100% + 10px )) rotate(405deg);
+}
+.login-header__menu:hover .menu-item:nth-child(2) {
+  opacity: 0;
+}
+.login-header__menu:hover .menu-item:nth-child(3) {
+  transform: translateY(calc( -100% - 10px )) rotate(-45deg);
+}
 
 .form-container {
   width: 60%;
@@ -41,6 +68,7 @@
 .form-container__btn {
   width: 60%;
   margin: 0 auto;
+  margin-bottom: 50px;
 }
 .form-container__btn .form-btn {
   display: block;
@@ -52,5 +80,14 @@
 }
 .form-container__btn .form-btn:hover {
   background-color: black;
+  color: white;
+}
+.form-container__btn .form-btn.hover-animation {
+  color: blue;
+  border-color: blue;
+  transition: all 2s;
+}
+.form-container__btn .form-btn.hover-animation:hover {
+  background-color: blue;
   color: white;
 }/*# sourceMappingURL=login.css.map */
